@@ -1,0 +1,89 @@
+@import "../../App.scss";
+
+.add-reminder-form {
+  padding: 16px;
+  background-color: $primary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    color: #fff;
+    margin-bottom: 0.3em;
+  }
+
+  .add-reminder-paragraph {
+    margin-top: 0;
+    color: #fff;
+  }
+
+  .notification-preview {
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .notification-field {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      .notification-title,
+      .notification-description {
+        color: #000;
+        font-size: 1em;
+        margin-bottom: 0.3em;
+      }
+
+      .edit-icon {
+        color: #595959;
+      }
+    }
+
+    .input-field {
+      margin-bottom: 10px;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .tags-container {
+    margin-bottom: 10px;
+  }
+
+  .tag-item {
+    margin-bottom: 5px;
+    background-color: #cdd6f5;
+    color: #002242;
+    font-weight: 500;
+  }
+
+  .add-reminder-button {
+    display: flex;
+    justify-content: end;
+
+    .primary-confirmation-button {
+      background-color: $highlight-primary-color;
+      border: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: darken($highlight-primary-color, 10%) !important;
+      }
+
+      &.success {
+        background-color: #52c41a;
+        border-color: #52c41a;
+        color: #fff;
+
+        &:hover {
+          background-color: #52c41a;
+          border-color: #52c41a;
+        }
+      }
+    }
+  }
+}

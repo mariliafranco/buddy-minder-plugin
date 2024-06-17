@@ -1,0 +1,50 @@
+@import "../../App.scss";
+
+.loggedin-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .welcome-section {
+    text-align: center;
+
+    .welcome-message {
+      font-family: "Shadows Into Light", cursive;
+      font-size: 24px;
+      color: #595959;
+    }
+
+    .reminder-info {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+
+    .reminders-link-container {
+      margin-top: 10px;
+    }
+
+    .reminders-link {
+      color: $highlight-secundary-color;
+      font-size: 16px;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .logout-button {
+      float: inline-end;
+      margin-top: 3em;
+      color: $primary-color;
+
+      &:hover {
+        color: $highlight-secundary-color;
+      }
+    }
+  }
+}

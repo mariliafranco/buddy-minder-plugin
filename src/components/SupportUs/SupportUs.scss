@@ -1,0 +1,67 @@
+@import "../../App.scss";
+
+.support-us-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .support-title {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .support-message {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .support-buttons {
+    margin-top: 20px;
+
+    .ant-btn {
+      width: 100%;
+      max-width: 250px;
+      margin: 5px auto;
+    }
+  }
+
+  .share-section {
+    margin-top: 30px;
+
+    .share-title {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .ant-space {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  .paypal-message {
+    a {
+      background-color: $primary-color;
+    }
+  }
+
+  .contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+
+    a {
+      color: $highlight-secundary-color;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

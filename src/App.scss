@@ -1,0 +1,96 @@
+$primary-color: #4979bf;
+$secondary-color: #fbc4c8;
+$background-color: #cdd6f5;
+$highlight-primary-color: #6d0d38;
+// $highlight-secundary-color: #c264c6;
+$highlight-secundary-color: #c15988;
+
+$accent-color: #002242;
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.ant-layout-sider-collapsed .logo .logo-image {
+  width: 80%;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.site-layout {
+  background: #fff;
+
+  .ant-layout-content {
+    h2 {
+      font-family: "Shadows Into Light", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+
+  .site-layout-background {
+    // background-color: $accent-color;
+    background-color: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .site-layout-header {
+      font-family: "Shadows Into Light Two", cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: $primary-color;
+    }
+  }
+}
+
+.navigation-bar-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .ant-menu-overflow.ant-menu.ant-menu-root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $accent-color;
+
+    .ant-menu-overflow-item.ant-menu-item.ant-menu-item-active,
+    .ant-menu-item-selected {
+      background-color: darken($primary-color, 10%) !important;
+    }
+  }
+
+  .ant-menu-dark .ant-menu-item {
+    color: #fff !important;
+  }
+}
+
+.primary-confirmation-button {
+  background-color: $highlight-primary-color;
+}
+.primary-confirmation-button:hover {
+  background-color: darken($primary-color, 10%) !important;
+}
+
+.secondary-button {
+  color: $highlight-secundary-color;
+
+  :hover {
+    color: darken($primary-color, 10%) !important;
+    font-weight: 500;
+  }
+}
