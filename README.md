@@ -27,15 +27,15 @@ Our mission is to help users fix paths in their brain through memorization and r
 
 2. Install dependencies:
 
-````bash
+```bash
   npm install
-  ```
+```
 
 3. Build the project:
 
 ```bash
   npm run build
-````
+```
 
 4. Load the extension in Chrome:
 
