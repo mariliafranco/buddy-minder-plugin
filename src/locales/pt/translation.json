@@ -16,10 +16,12 @@
   "passwordResetEmailSent": "E-mail de redefinição de senha foi enviado!",
 
   "supportTitle": "Apoie-nos",
-  "supportMessage": "Se você gosta de usar este aplicativo e gostaria de nos apoiar, você pode nos ajudar a melhorar e adicionar novos recursos, mesmo uma pequena quantia para comprar um café pode nos ajudar. ",
-  "paypalMessage": "Considere doar via PayPal!",
-  "contactInfo": "Por favor, entre em contato conosco para obter os detalhes bancários para doações: ",
-  "donateViaPayPal": "Doar via PayPal",
+  "supportMessage": "Se você gosta de usar este aplicativo e gostaria de nos apoiar, você pode nos ajudar a melhorar e adicionar novos recursos.",
+  "paypalMessage": "Doe via PayPal ou",
+  "coffeeMessage": "compre-nos um café!",
+  "contactInfo": "Faltando algo ou tem sugestões? Entre em contato conosco em ",
+  "donateViaPayPal": "Doe via PayPal",
+  "buyMeACoffee": "Compre-me um Café",
 
   "welcome": "Bem-vindo",
   "reminderInfo": "Você já tem {{count}} lembretes registrados. Sua memória já melhorou?",

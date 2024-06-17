@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "antd";
+import { Typography, Button, Space } from "antd";
 import { useTranslation } from "react-i18next";
 import { DollarCircleFilled, CoffeeOutlined } from "@ant-design/icons";
 import "./SupportUs.scss";
@@ -14,22 +14,27 @@ const SupportUs = () => {
       <Title level={4} className="support-title">
         {t("supportTitle")}
       </Title>
-      <Text className="support-message">
-        {t("supportMessage")} {t("paypalMessage")}{" "}
-        <CoffeeOutlined className="coffee-icon" />
-      </Text>
-
-      <div className="paypal-message">
+      <Text className="support-message">{t("supportMessage")}</Text>
+      <Space className="support-buttons" direction="vertical">
         <Button
+          className="donation-button"
           type="primary"
           icon={<DollarCircleFilled />}
           href="https://www.paypal.com/donate/?business=6TTSYGQTETA62&no_recurring=0&currency_code=BRL"
           target="_blank"
-          style={{ marginTop: "10px" }}
         >
           {t("donateViaPayPal")}
         </Button>
-      </div>
+        <Button
+          className="donation-button"
+          type="primary"
+          icon={<CoffeeOutlined />}
+          href="https://buymeacoffee.com/mariliafrc"
+          target="_blank"
+        >
+          {t("buyMeACoffee")}
+        </Button>
+      </Space>
       <div className="contact-info">
         <Text>
           {t("contactInfo")}

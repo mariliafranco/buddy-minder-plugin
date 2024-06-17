@@ -16,10 +16,12 @@
   "passwordResetEmailSent": "L'e-mail de réinitialisation du mot de passe a été envoyé!",
 
   "supportTitle": "Soutenez-nous",
-  "supportMessage": "Si vous aimez utiliser cette application et souhaitez nous soutenir, vous pouvez nous aider à améliorer et à ajouter de nouvelles fonctionnalités, même un petit montant pour acheter un café peut nous aider. ",
-  "paypalMessage": "Envisagez de faire un don via PayPal!",
-  "contactInfo": "Veuillez nous contacter pour obtenir les coordonnées bancaires pour les dons: ",
+  "supportMessage": "Si vous aimez utiliser cette application et que vous souhaitez nous soutenir, vous pouvez nous aider à améliorer et ajouter de nouvelles fonctionnalités.",
+  "paypalMessage": "Faites un don via PayPal ou",
+  "coffeeMessage": "achetez-nous un café!",
+  "contactInfo": "Vous manquez quelque chose ou avez des suggestions? Contactez-nous à ",
   "donateViaPayPal": "Faire un don via PayPal",
+  "buyMeACoffee": "Achetez-moi un Café",
 
   "settings": "Paramètres",
   "sendNotifications": "Envoyez-moi des Notifications",

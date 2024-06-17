@@ -16,10 +16,12 @@
   "passwordResetEmailSent": "¡El correo electrónico de restablecimiento de contraseña ha sido enviado!",
 
   "supportTitle": "Apóyanos",
-  "supportMessage": "Si disfrutas usando esta aplicación y te gustaría apoyarnos, puedes ayudarnos a mejorar y agregar nuevas funciones, incluso una pequeña cantidad para comprar un café puede ayudarnos.",
-  "paypalMessage": "¡Considera donar vía PayPal!",
-  "contactInfo": "Por favor, contáctanos para obtener los detalles bancarios para donaciones: ",
+  "supportMessage": "Si disfrutas usando esta aplicación y te gustaría apoyarnos, puedes ayudarnos a mejorar y añadir nuevas características.",
+  "paypalMessage": "Dona vía PayPal o",
+  "coffeeMessage": "¡cómpranos un café!",
+  "contactInfo": "¿Falta algo o tienes sugerencias? Contáctanos en ",
   "donateViaPayPal": "Donar vía PayPal",
+  "buyMeACoffee": "Cómprame un Café",
 
   "settings": "Configuraciones",
   "sendNotifications": "Envíame Notificaciones",

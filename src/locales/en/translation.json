@@ -26,10 +26,12 @@
   "logout": "Logout",
 
   "supportTitle": "Support Us",
-  "supportMessage": "If you enjoy using this app and would like to support us, you can help us improve and add new features, even a small amount to buy a coffee can help us. ",
-  "paypalMessage": "Consider donating via PayPal!",
-  "contactInfo": "Please contact us to get the banking details for donations: ",
+  "supportMessage": "If you enjoy using this app and would like to support us, you can help us improve and add new features.",
+  "paypalMessage": "Donate via PayPal or",
+  "coffeeMessage": "buy us a coffee!",
+  "contactInfo": "Missing something or have suggestions? Reach us at ",
   "donateViaPayPal": "Donate via PayPal",
+  "buyMeACoffee": "Buy Me a Coffee",
 
   "settings": "Settings",
   "sendNotifications": "Send me Notifications",

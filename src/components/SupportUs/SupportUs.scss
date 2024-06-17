@@ -23,31 +23,20 @@
 
   .support-buttons {
     margin-top: 20px;
+    display: flex;
 
     .ant-btn {
       width: 100%;
       max-width: 250px;
       margin: 5px auto;
     }
-  }
 
-  .share-section {
-    margin-top: 30px;
+    .donation-button {
+      background-color: $highlight-secundary-color;
 
-    .share-title {
-      font-size: 18px;
-      color: #333;
-    }
-
-    .ant-space {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-  }
-  .paypal-message {
-    a {
-      background-color: $primary-color;
+      &:hover {
+        background-color: $primary-color;
+      }
     }
   }
 
