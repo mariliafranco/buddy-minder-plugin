@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# BuddyMinder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![BuddyMinder Logo](public/assets/remindly-vector.png)
 
-## Available Scripts
+BuddyMinder is a Chrome extension designed to help users enhance their memory through repetitive reminders. It allows users to create reminders for important tasks, dates, and personal goals, and delivers notifications at set intervals to ensure consistent reinforcement.
 
-In the project directory, you can run:
+## Purpose
 
-### `npm start`
+Our mission is to help users fix paths in their brain through memorization and repetition. By regularly reminding users of important information, BuddyMinder aids in improving memory retention and cognitive function. Whether it's remembering important dates, personal goals, or useful information, BuddyMinder is here to help.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Create Reminders**: Easily create reminders with titles, descriptions, and tags.
+- **Custom Tags**: Use built-in tags or create your own to categorize reminders.
+- **Notification System**: Set intervals for notifications to receive reminders throughout the day.
+- **User Authentication**: Securely log in and manage your reminders with Firebase authentication.
+- **Multi-language Support**: Available in English, Portuguese, Spanish, and French.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/yourusername/buddyminder.git
+   cd buddyminder
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+````bash
+  npm install
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Build the project:
 
-### `npm run eject`
+```bash
+  npm run build
+````
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Load the extension in Chrome:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open Chrome and navigate to chrome://extensions/
+Enable "Developer mode"
+Click "Load unpacked" and select the build folder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Create a Reminder:
 
-## Learn More
+Click on the BuddyMinder icon in the Chrome toolbar.
+Fill in the title, description, and tags for your reminder.
+Click "Add" to save your reminder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### View Reminders:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Navigate to the "Your Reminders" tab to view all your saved reminders.
 
-### Code Splitting
+#### Settings:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Adjust notification frequency and manage tags in the "Settings" tab.
