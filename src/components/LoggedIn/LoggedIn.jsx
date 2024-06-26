@@ -1,3 +1,4 @@
+/* global chrome */
 import React, { useEffect, useState } from "react";
 import { Button, Divider, Typography } from "antd";
 import { collection, getDocs } from "firebase/firestore";
@@ -10,8 +11,8 @@ import "./LoggedIn.scss";
 const { Title, Text } = Typography;
 
 const LoggedIn = ({ user }) => {
-  const [reminderCount, setReminderCount] = useState(0);
   const { t } = useTranslation();
+  const [reminderCount, setReminderCount] = useState(0);
 
   useEffect(() => {
     const fetchReminders = async () => {
@@ -36,6 +37,11 @@ const LoggedIn = ({ user }) => {
 
   return (
     <div className="loggedin-container">
+      <div className="loggedin-logout-container">
+        <Button onClick={handleLogout} type="link" className="logout-button">
+          {t("logout")}
+        </Button>
+      </div>
       <div className="welcome-section">
         <Title level={2} className="welcome-message">
           {t("welcome")}, {user.email}
@@ -44,13 +50,10 @@ const LoggedIn = ({ user }) => {
           {t("reminderInfo", { count: reminderCount })}
         </Text>
         <div className="reminders-link-container">
-          <Link to="/" className="reminders-link">
+          <Link to="/user-reminders" className="reminders-link">
             {t("goToReminders")}
           </Link>
         </div>
-        <Button onClick={handleLogout} type="link" className="logout-button">
-          {t("logout")}
-        </Button>
       </div>
       <Divider />
       <SupportUs />

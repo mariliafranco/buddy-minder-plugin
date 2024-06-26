@@ -1,0 +1,215 @@
+{
+  "appName": {
+    "message": "BuddyMinder"
+  },
+  "appDescription": {
+    "message": "BuddyMinder helps you retain what you've learned or don't want to forget by using effective memorization and repetition techniques in a no-effort and engaging way."
+  },
+  "register": {
+    "message": "Register"
+  },
+  "login": {
+    "message": "Login"
+  },
+  "email": {
+    "message": "E-mail"
+  },
+  "invalidEmail": {
+    "message": "The input is not valid E-mail!"
+  },
+  "emailRequired": {
+    "message": "Please input your E-mail!"
+  },
+  "password": {
+    "message": "Password"
+  },
+  "passwordRequired": {
+    "message": "Please input your password!"
+  },
+  "confirmPassword": {
+    "message": "Confirm Password"
+  },
+  "confirmPasswordRequired": {
+    "message": "Please confirm your password!"
+  },
+  "passwordMismatch": {
+    "message": "The passwords do not match!"
+  },
+  "alreadyHaveAccount": {
+    "message": "Already have an account? Login"
+  },
+  "dontHaveAccount": {
+    "message": "Don't have an account? Register"
+  },
+  "forgotPassword": {
+    "message": "Forgot Password?"
+  },
+  "loginWithGoogle": {
+    "message": "Login with Google"
+  },
+  "passwordResetEmailSent": {
+    "message": "Password reset email has been sent!"
+  },
+  "supportUs": {
+    "message": "Support Us"
+  },
+  "contactMessage": {
+    "message": "Missing something or have suggestions? Reach us at"
+  },
+  "welcome": {
+    "message": "Welcome"
+  },
+  "reminderInfo": {
+    "message": "You have already {{count}} reminders registered. Has your memory improved already?"
+  },
+  "goToReminders": {
+    "message": "Go to Your Reminders"
+  },
+  "logout": {
+    "message": "Logout"
+  },
+  "supportTitle": {
+    "message": "Support Us"
+  },
+  "supportMessage": {
+    "message": "If you enjoy using this app and would like to support us, you can help us improve and add new features."
+  },
+  "paypalMessage": {
+    "message": "Donate via PayPal or"
+  },
+  "coffeeMessage": {
+    "message": "buy us a coffee!"
+  },
+  "contactInfo": {
+    "message": "Missing something or have suggestions? Reach us at "
+  },
+  "donateViaPayPal": {
+    "message": "Donate via PayPal"
+  },
+  "buyMeACoffee": {
+    "message": "Buy Me a Coffee"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "sendNotifications": {
+    "message": "Send me Notifications"
+  },
+  "showRemindersByTags": {
+    "message": "Show Only Reminders Based on Selected Tags"
+  },
+  "tags": {
+    "message": "Tags"
+  },
+  "noCategories": {
+    "message": "You haven't created any categories yet."
+  },
+  "createNewReminder": {
+    "message": "Create your new reminder"
+  },
+  "here": {
+    "message": "here"
+  },
+  "startBoostingMemory": {
+    "message": "to start boosting your memory!"
+  },
+  "notificationFrequency": {
+    "message": "Notification Frequency"
+  },
+  "remindersEvery": {
+    "message": "Reminders will be sent every"
+  },
+  "minutes": {
+    "message": "minutes"
+  },
+  "changeFrequency": {
+    "message": "Change frequency"
+  },
+  "launchNewMemorization": {
+    "message": "Launch New Memorization"
+  },
+  "user": {
+    "message": "User"
+  },
+  "yourBrainsMemorizationCollection": {
+    "message": "Your Brain's Memorization Collection"
+  },
+  "noRemindersYet": {
+    "message": "You don't have any reminders yet"
+  },
+  "titleRequired": {
+    "message": "Please enter a title"
+  },
+  "descriptionRequired": {
+    "message": "Please enter a description"
+  },
+  "fillAllFields": {
+    "message": "Please fill in all fields and add at least one tag."
+  },
+  "writeWhatYouWantToMemorize": {
+    "message": "Write What You Want to Memorize"
+  },
+  "addRemindersHere": {
+    "message": "Add your reminders here and let BuddyMinder do the rest."
+  },
+  "useTagsToOrganize": {
+    "message": "Use tags to organize and personalize your reminders for a smarter, more efficient memory boost."
+  },
+  "titleOfYourReminder": {
+    "message": "Title of your reminder"
+  },
+  "titlePlaceholder": {
+    "message": "Title (max 30 chars)"
+  },
+  "descriptionPlaceholder": {
+    "message": "Description of your reminder. Keep it brief!"
+  },
+  "tagsPlaceholder": {
+    "message": "Tags (comma separated)"
+  },
+  "dates": {
+    "message": "Dates"
+  },
+  "familyBirthday": {
+    "message": "Family Birthday"
+  },
+  "weddingAnniversary": {
+    "message": "Wedding Anniversary"
+  },
+  "goals": {
+    "message": "Goals"
+  },
+  "personalGoals": {
+    "message": "Personal Goals"
+  },
+  "professionalGoals": {
+    "message": "Professional Goals"
+  },
+  "insights": {
+    "message": "Insights"
+  },
+  "books": {
+    "message": "Books"
+  },
+  "stoicism": {
+    "message": "Stoicism"
+  },
+  "positiveAffirmations": {
+    "message": "Positive Affirmations"
+  },
+  "learning": {
+    "message": "Learning"
+  },
+  "englishGrammar": {
+    "message": "English Grammar"
+  },
+  "englishWords": {
+    "message": "English Words"
+  },
+  "yourTags": {
+    "message": "Your Tags"
+  },
+  "add": {
+    "message": "Add"
+  }
+}

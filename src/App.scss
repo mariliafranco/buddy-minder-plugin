@@ -2,10 +2,26 @@ $primary-color: #4979bf;
 $secondary-color: #fbc4c8;
 $background-color: #cdd6f5;
 $highlight-primary-color: #6d0d38;
-// $highlight-secundary-color: #c264c6;
 $highlight-secundary-color: #c15988;
-
 $accent-color: #002242;
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+}
 
 .logo {
   display: flex;
@@ -42,7 +58,6 @@ $accent-color: #002242;
   }
 
   .site-layout-background {
-    // background-color: $accent-color;
     background-color: unset;
     display: flex;
     justify-content: center;

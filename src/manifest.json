@@ -1,29 +1,36 @@
 {
   "manifest_version": 3,
   "name": "BuddyMinder",
-  "description": "A memorization app",
+  "description": "__MSG_appDescription__",
   "version": "1.0",
   "permissions": [
     "storage",
     "activeTab",
     "scripting",
     "notifications",
-    "alarms"
+    "alarms",
+    "contextMenus",
+    "webNavigation",
+    "tabs"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.bundle.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.bundle.js"],
+      "all_frames": true
     }
   ],
   "action": {
-    "default_popup": "index.html"
+    "default_title": "BuddyMinder",
+    "default_popup": "popup.html"
   },
   "icons": {
     "48": "icon-48.png",
     "128": "icon-128.png"
-  }
+  },
+  "author": "mariliaandrad",
+  "default_locale": "en"
 }

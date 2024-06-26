@@ -4,17 +4,34 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  z-index: 100;
+
+  .loggedin-logout-container {
+    display: flex;
+    justify-content: end;
+
+    .logout-button {
+      color: $primary-color;
+
+      &:hover {
+        color: $highlight-secundary-color;
+      }
+    }
+  }
 
   .welcome-section {
     text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 
     .welcome-message {
       font-family: "Shadows Into Light", cursive;
       font-size: 24px;
       color: #595959;
+      margin-top: 0;
     }
 
     .reminder-info {
@@ -34,16 +51,6 @@
 
       &:hover {
         color: $primary-color;
-      }
-    }
-
-    .logout-button {
-      float: inline-end;
-      margin-top: 3em;
-      color: $primary-color;
-
-      &:hover {
-        color: $highlight-secundary-color;
       }
     }
   }

@@ -2,12 +2,16 @@
 
 .settings-container {
   background-color: #f0f2f5;
-  padding: 40px;
+  // padding: 40px;
   border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto;
+  // max-width: 600px;
+  // margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  padding: 10px 20px;
+  margin-bottom: 5em;
+  height: 100vh;
+  z-index: 100;
+
   .ant-switch.ant-switch-checked {
     background-color: $highlight-primary-color;
 
@@ -78,28 +82,3 @@
 .ant-picker-dropdown button {
   background-color: $highlight-primary-color;
 }
-
-// html,
-// body {
-//   height: 100%;
-// }
-
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   margin: 0;
-// }
-
-// #root {
-//   flex: 1 0 auto;
-// }
-
-// .footer {
-//   flex-shrink: 0;
-// }
-
-// .content {
-//   flex: 1 0 auto;
-//   padding-bottom: 20px; // Ensure there is space between the content and the footer
-//   overflow-y: auto; // Ensure the content can scroll if it overflows
-// }

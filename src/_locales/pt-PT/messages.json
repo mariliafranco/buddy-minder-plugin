@@ -1,0 +1,215 @@
+{
+  "appName": {
+    "message": "BuddyMinder"
+  },
+  "appDescription": {
+    "message": "O BuddyMinder ajuda-te a reter o que aprendeste ou não queres esquecer, utilizando técnicas eficazes de memorização e repetição de forma fácil e envolvente."
+  },
+  "register": {
+    "message": "Registrar"
+  },
+  "login": {
+    "message": "Entrar"
+  },
+  "email": {
+    "message": "E-mail"
+  },
+  "invalidEmail": {
+    "message": "O e-mail inserido não é válido!"
+  },
+  "emailRequired": {
+    "message": "Por favor, insira seu e-mail!"
+  },
+  "password": {
+    "message": "Senha"
+  },
+  "passwordRequired": {
+    "message": "Por favor, insira sua senha!"
+  },
+  "confirmPassword": {
+    "message": "Confirmar Senha"
+  },
+  "confirmPasswordRequired": {
+    "message": "Por favor, confirme sua senha!"
+  },
+  "passwordMismatch": {
+    "message": "As senhas não coincidem!"
+  },
+  "alreadyHaveAccount": {
+    "message": "Já tem uma conta? Entrar"
+  },
+  "dontHaveAccount": {
+    "message": "Não tem uma conta? Registrar"
+  },
+  "forgotPassword": {
+    "message": "Esqueceu a senha?"
+  },
+  "loginWithGoogle": {
+    "message": "Entrar com Google"
+  },
+  "passwordResetEmailSent": {
+    "message": "E-mail de redefinição de senha foi enviado!"
+  },
+  "supportUs": {
+    "message": "Apoie-nos"
+  },
+  "contactMessage": {
+    "message": "Está a faltar algo ou tem sugestões? Contacte-nos em"
+  },
+  "welcome": {
+    "message": "Bem-vindo"
+  },
+  "reminderInfo": {
+    "message": "Já tens {{count}} lembretes registados. A tua memória já melhorou?"
+  },
+  "goToReminders": {
+    "message": "Ir para os teus Lembretes"
+  },
+  "logout": {
+    "message": "Sair"
+  },
+  "supportTitle": {
+    "message": "Apoie-nos"
+  },
+  "supportMessage": {
+    "message": "Se gosta de usar esta aplicação e gostaria de nos apoiar, pode ajudar-nos a melhorar e adicionar novos recursos."
+  },
+  "paypalMessage": {
+    "message": "Doe via PayPal ou"
+  },
+  "coffeeMessage": {
+    "message": "compra-nos um café!"
+  },
+  "contactInfo": {
+    "message": "Está a faltar algo ou tem sugestões? Contacte-nos em "
+  },
+  "donateViaPayPal": {
+    "message": "Doe via PayPal"
+  },
+  "buyMeACoffee": {
+    "message": "Compra-me um Café"
+  },
+  "settings": {
+    "message": "Configurações"
+  },
+  "sendNotifications": {
+    "message": "Envie-me Notificações"
+  },
+  "showRemindersByTags": {
+    "message": "Mostrar Apenas Lembretes Baseados nas Tags Selecionadas"
+  },
+  "tags": {
+    "message": "Tags"
+  },
+  "noCategories": {
+    "message": "Ainda não criou nenhuma categoria."
+  },
+  "createNewReminder": {
+    "message": "Crie o seu novo lembrete"
+  },
+  "here": {
+    "message": "aqui"
+  },
+  "startBoostingMemory": {
+    "message": "para começar a aumentar a sua memória!"
+  },
+  "notificationFrequency": {
+    "message": "Frequência de Notificações"
+  },
+  "remindersEvery": {
+    "message": "Os lembretes serão enviados a cada"
+  },
+  "minutes": {
+    "message": "minutos"
+  },
+  "changeFrequency": {
+    "message": "Alterar frequência"
+  },
+  "launchNewMemorization": {
+    "message": "Iniciar Nova Memorização"
+  },
+  "user": {
+    "message": "Utilizador"
+  },
+  "yourBrainsMemorizationCollection": {
+    "message": "A Tua Coleção de Memorização Cerebral"
+  },
+  "noRemindersYet": {
+    "message": "Ainda não tem nenhum lembrete"
+  },
+  "titleRequired": {
+    "message": "Por favor, insira um título"
+  },
+  "descriptionRequired": {
+    "message": "Por favor, insira uma descrição"
+  },
+  "fillAllFields": {
+    "message": "Por favor, preencha todos os campos e adicione pelo menos uma tag."
+  },
+  "writeWhatYouWantToMemorize": {
+    "message": "Escreva o que quer memorizar"
+  },
+  "addRemindersHere": {
+    "message": "Adicione os seus lembretes aqui e deixe o BuddyMinder fazer o resto."
+  },
+  "useTagsToOrganize": {
+    "message": "Use tags para organizar e personalizar os seus lembretes para um impulso de memória mais inteligente e eficiente."
+  },
+  "titleOfYourReminder": {
+    "message": "Título do seu lembrete"
+  },
+  "titlePlaceholder": {
+    "message": "Título (máx. 30 caracteres)"
+  },
+  "descriptionPlaceholder": {
+    "message": "Descrição do seu lembrete. Mantenha breve!"
+  },
+  "tagsPlaceholder": {
+    "message": "Tags (separadas por vírgula)"
+  },
+  "dates": {
+    "message": "Datas"
+  },
+  "familyBirthday": {
+    "message": "Aniversário da Família"
+  },
+  "weddingAnniversary": {
+    "message": "Aniversário de Casamento"
+  },
+  "goals": {
+    "message": "Metas"
+  },
+  "personalGoals": {
+    "message": "Metas Pessoais"
+  },
+  "professionalGoals": {
+    "message": "Metas Profissionais"
+  },
+  "insights": {
+    "message": "Perspetivas"
+  },
+  "books": {
+    "message": "Livros"
+  },
+  "stoicism": {
+    "message": "Estoicismo"
+  },
+  "positiveAffirmations": {
+    "message": "Afirmações Positivas"
+  },
+  "learning": {
+    "message": "Aprendizagem"
+  },
+  "englishGrammar": {
+    "message": "Gramática Inglesa"
+  },
+  "englishWords": {
+    "message": "Palavras em Inglês"
+  },
+  "yourTags": {
+    "message": "Suas Tags"
+  },
+  "add": {
+    "message": "Adicionar"
+  }
+}

@@ -1,4 +1,6 @@
 {
+  "appName": "BuddyMinder",
+  "appDescription": "BuddyMinder vous aide à retenir ce que vous avez appris ou que vous ne voulez pas oublier en utilisant des techniques efficaces de mémorisation et de répétition de manière facile et engageante.",
   "register": "S'inscrire",
   "login": "Connexion",
   "email": "E-mail",
@@ -14,7 +16,12 @@
   "forgotPassword": "Mot de passe oublié?",
   "loginWithGoogle": "Connexion avec Google",
   "passwordResetEmailSent": "L'e-mail de réinitialisation du mot de passe a été envoyé!",
-
+  "supportUs": "Soutenez-nous",
+  "contactMessage": "Vous manquez quelque chose ou avez des suggestions? Contactez-nous à",
+  "welcome": "Bienvenue",
+  "reminderInfo": "Vous avez déjà {{count}} rappels enregistrés. Votre mémoire s'est-elle déjà améliorée?",
+  "goToReminders": "Aller à Vos Rappels",
+  "logout": "Déconnexion",
   "supportTitle": "Soutenez-nous",
   "supportMessage": "Si vous aimez utiliser cette application et que vous souhaitez nous soutenir, vous pouvez nous aider à améliorer et ajouter de nouvelles fonctionnalités.",
   "paypalMessage": "Faites un don via PayPal ou",
@@ -22,7 +29,6 @@
   "contactInfo": "Vous manquez quelque chose ou avez des suggestions? Contactez-nous à ",
   "donateViaPayPal": "Faire un don via PayPal",
   "buyMeACoffee": "Achetez-moi un Café",
-
   "settings": "Paramètres",
   "sendNotifications": "Envoyez-moi des Notifications",
   "showRemindersByTags": "Afficher uniquement les rappels basés sur les tags sélectionnés",
@@ -35,13 +41,10 @@
   "remindersEvery": "Les rappels seront envoyés toutes les",
   "minutes": "minutes",
   "changeFrequency": "Changer la fréquence",
-
   "launchNewMemorization": "Lancer une Nouvelle Mémorisation",
   "user": "Utilisateur",
-
   "yourBrainsMemorizationCollection": "Votre Collection de Mémorisation Cérébrale",
   "noRemindersYet": "Vous n'avez pas encore de rappels",
-
   "titleRequired": "Veuillez entrer un titre",
   "descriptionRequired": "Veuillez entrer une description",
   "fillAllFields": "Veuillez remplir tous les champs et ajouter au moins une étiquette.",

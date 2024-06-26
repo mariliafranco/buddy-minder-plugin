@@ -1,27 +1,39 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import translationEN from "./locales/en/translation.json";
+import translationES from "./locales/es/translation.json";
+import translationFR from "./locales/fr/translation.json";
+import translationPT_BR from "./locales/pt_BR/translation.json";
+import translationPT_PT from "./locales/pt_PT/translation.json";
 
-// Import translation files
-import enTranslation from "./locales/en/translation.json";
-import frTranslation from "./locales/fr/translation.json";
-import esTranslation from "./locales/es/translation.json";
-import ptTranslation from "./locales/pt/translation.json";
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  es: {
+    translation: translationES,
+  },
+  fr: {
+    translation: translationFR,
+  },
+  pt_BR: {
+    translation: translationPT_BR,
+  },
+  pt_PT: {
+    translation: translationPT_PT,
+  },
+};
 
 i18n
-  .use(LanguageDetector) // Detect language from browser settings
-  .use(initReactI18next) // Pass the i18n instance to react-i18next
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
-    resources: {
-      lng: "en",
-      en: { translation: enTranslation },
-      fr: { translation: frTranslation },
-      es: { translation: esTranslation },
-      pt: { translation: ptTranslation },
-    },
-    fallbackLng: "en", // Use English if detected language is not available
+    resources,
+    fallbackLng: "en",
+    debug: true,
     interpolation: {
-      escapeValue: false, // React already escapes values to prevent XSS
+      escapeValue: false,
     },
   });
 

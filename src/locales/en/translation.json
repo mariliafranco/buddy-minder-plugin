@@ -1,4 +1,6 @@
 {
+  "appName": "BuddyMinder",
+  "appDescription": "BuddyMinder helps you retain what you've learned or don't want to forget by using effective memorization and repetition techniques in a no-effort and engaging way.",
   "register": "Register",
   "login": "Login",
   "email": "E-mail",
@@ -14,17 +16,12 @@
   "forgotPassword": "Forgot Password?",
   "loginWithGoogle": "Login with Google",
   "passwordResetEmailSent": "Password reset email has been sent!",
-
   "supportUs": "Support Us",
-  "bankingInfo": "International Bank Account Number: BR9378632767000010005861331C1",
-  "pixInfo": "PIX: marilia.andrad@gmail.com",
   "contactMessage": "Missing something or have suggestions? Reach us at",
-
   "welcome": "Welcome",
   "reminderInfo": "You have already {{count}} reminders registered. Has your memory improved already?",
   "goToReminders": "Go to Your Reminders",
   "logout": "Logout",
-
   "supportTitle": "Support Us",
   "supportMessage": "If you enjoy using this app and would like to support us, you can help us improve and add new features.",
   "paypalMessage": "Donate via PayPal or",
@@ -32,7 +29,6 @@
   "contactInfo": "Missing something or have suggestions? Reach us at ",
   "donateViaPayPal": "Donate via PayPal",
   "buyMeACoffee": "Buy Me a Coffee",
-
   "settings": "Settings",
   "sendNotifications": "Send me Notifications",
   "showRemindersByTags": "Show Only Reminders Based on Selected Tags",
@@ -45,13 +41,10 @@
   "remindersEvery": "Reminders will be sent every",
   "minutes": "minutes",
   "changeFrequency": "Change frequency",
-
   "launchNewMemorization": "Launch New Memorization",
   "user": "User",
-
   "yourBrainsMemorizationCollection": "Your Brain's Memorization Collection",
   "noRemindersYet": "You don't have any reminders yet",
-
   "titleRequired": "Please enter a title",
   "descriptionRequired": "Please enter a description",
   "fillAllFields": "Please fill in all fields and add at least one tag.",

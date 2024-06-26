@@ -12,9 +12,9 @@ import {
   InputNumber,
 } from "antd";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { collection, getDocs } from "firebase/firestore";
 import { db, auth } from "../../firebase"; // Adjust the import path as needed
+import { useTranslation } from "react-i18next";
 import "./Settings.scss";
 
 const { CheckableTag } = Tag;
@@ -108,38 +108,40 @@ const Settings = () => {
         {activateTags && (
           <Col span={24} className="settings-col">
             <Text strong>{t("tags")}</Text>
-            {userTags.length > 0 ? (
-              <Row>
-                {userTags.map((tag) => (
-                  <Col
-                    key={tag}
-                    style={{ marginRight: "10px", marginTop: "10px" }}
-                  >
-                    <CheckableTag
-                      checked={selectedTags.includes(tag)}
-                      onChange={(checked) => handleChange(tag, checked)}
+            <div>
+              {userTags.length > 0 ? (
+                <Row>
+                  {userTags.map((tag) => (
+                    <Col
+                      key={tag}
+                      style={{ marginRight: "10px", marginTop: "10px" }}
                     >
-                      {tag}
-                    </CheckableTag>
-                  </Col>
-                ))}
-              </Row>
-            ) : (
-              <Alert
-                message={t("noCategories")}
-                description={
-                  <>
-                    {t("createNewReminder")}{" "}
-                    <Link className="settings-link" to="/add-reminder">
-                      {t("here")}
-                    </Link>{" "}
-                    {t("startBoostingMemory")}
-                  </>
-                }
-                type="info"
-                style={{ marginTop: "10px" }}
-              />
-            )}
+                      <CheckableTag
+                        checked={selectedTags.includes(tag)}
+                        onChange={(checked) => handleChange(tag, checked)}
+                      >
+                        {tag}
+                      </CheckableTag>
+                    </Col>
+                  ))}
+                </Row>
+              ) : (
+                <Alert
+                  message={t("noCategories")}
+                  description={
+                    <>
+                      {t("createNewReminder")}{" "}
+                      <Link className="settings-link" to="/">
+                        {t("here")}
+                      </Link>{" "}
+                      {t("startBoostingMemory")}
+                    </>
+                  }
+                  type="info"
+                  style={{ marginTop: "10px" }}
+                />
+              )}
+            </div>
           </Col>
         )}
         <Divider />

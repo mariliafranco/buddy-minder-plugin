@@ -1,16 +1,17 @@
 /* global chrome */
 import React, { useState, useEffect } from "react";
 import { Layout, Spin } from "antd";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { db, auth } from "./firebase";
-import Login from "./components/Login/Login";
-import YourReminders from "./components/YourReminders/YourReminders";
-import AddReminder from "./components/AddReminder/AddReminder";
-import Settings from "./components/Settings/Settings";
-import Footer from "./components/Footer/Footer";
+import Login from "./components/Login/Login.jsx";
+import YourReminders from "./components/YourReminders/YourReminders.jsx";
+import AddReminder from "./components/AddReminder/AddReminder.jsx";
+import Settings from "./components/Settings/Settings.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import { Avatar } from "antd";
 import brandIcon from "./remindly-vector.png";
 import { collection, addDoc, getDocs, query } from "firebase/firestore";
+import "./i18n";
 import "./App.scss";
 
 const { Header, Content } = Layout;
@@ -38,6 +39,26 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
+  // useEffect(() => {
+  //   if (selectedText !== title) {
+  //     setTitle(selectedText);
+  //     console.log("Inside the if selectedText = ", selectedText);
+  //   }
+
+  //   console.log("Outside the if selectedText = ", selectedText);
+  // }, [selectedText, title]);
+
+  useEffect(() => {
+    chrome.runtime.onMessage.addListener((message) => {
+      let selectedText = chrome.storage.local.get("selectedText");
+      if (selectedText) {
+        setTitle(selectedText);
+        console.log("Popup received text:", selectedText);
+      }
+    });
+    console.log(title);
+  }, []);
+
   const fetchReminders = async (user) => {
     try {
       if (user) {
@@ -47,7 +68,19 @@ const App = () => {
         const fetchedItems = snapshot.docs.map((doc) => doc.data());
         setItems(fetchedItems);
         if (typeof chrome !== "undefined" && chrome.storage) {
-          chrome.storage.local.set({ reminders: fetchedItems });
+          chrome.storage.local.set({ reminders: fetchedItems }, () => {
+            if (chrome.runtime.lastError) {
+              console.error(
+                "Error setting reminders:",
+                chrome.runtime.lastError
+              );
+            } else {
+              console.log("Reminders set successfully.");
+              chrome.storage.local.get("reminders", (data) => {
+                console.log("Stored reminders:", data);
+              });
+            }
+          });
         }
       }
     } catch (error) {
@@ -63,7 +96,19 @@ const App = () => {
         await addDoc(remindersRef, newItem);
         setItems((prevItems) => [...prevItems, newItem]);
         if (typeof chrome !== "undefined" && chrome.storage) {
-          chrome.storage.local.set({ reminders: [...items, newItem] });
+          chrome.storage.local.set({ reminders: [...items, newItem] }, () => {
+            if (chrome.runtime.lastError) {
+              console.error(
+                "Error setting reminders:",
+                chrome.runtime.lastError
+              );
+            } else {
+              console.log("Reminders updated successfully.");
+              chrome.storage.local.get("reminders", (data) => {
+                console.log("Updated reminders:", data);
+              });
+            }
+          });
         }
       }
     } catch (error) {
@@ -108,26 +153,51 @@ const App = () => {
     <Router>
       <Layout style={{ minHeight: "100vh" }}>
         <Layout className="site-layout">
-          <Header className="site-layout-background">
-            <h1 className="site-layout-header">
+          <header className="site-layout-background">
+            Testing
+            {/* <h1 className="site-layout-header">
               <Avatar
                 size={50}
                 src={brandIcon}
                 style={{ margin: "5px", verticalAlign: "middle" }}
               />
-              BuddyMinder<sup>&#174;</sup>
-            </h1>
-          </Header>
-          <Content style={{ margin: "16px" }}>
+              <span>
+                BuddyMinder<sup>&#174;</sup>
+              </span>
+            </h1> */}
+          </header>
+          {/* <Content style={{ margin: "16px" }}>
             <Routes>
               <Route
                 path="/"
+                element={
+                  user ? (
+                    <AddReminder
+                      title={title}
+                      setTitle={setTitle}
+                      description={description}
+                      setDescription={setDescription}
+                      tags={tags}
+                      setTags={setTags}
+                      addItem={addItem}
+                    />
+                  ) : (
+                    <Login
+                      onLoginSuccess={() => fetchReminders(auth.currentUser)}
+                      currentUser={auth.currentUser}
+                    />
+                  )
+                }
+              />
+              <Route
+                path="/user-reminders"
                 element={
                   user ? (
                     <YourReminders items={items} />
                   ) : (
                     <Login
                       onLoginSuccess={() => fetchReminders(auth.currentUser)}
+                      currentUser={auth.currentUser}
                     />
                   )
                 }
@@ -142,24 +212,10 @@ const App = () => {
                   />
                 }
               />
-              <Route
-                path="/add-reminder"
-                element={
-                  <AddReminder
-                    title={title}
-                    setTitle={setTitle}
-                    description={description}
-                    setDescription={setDescription}
-                    tags={tags}
-                    setTags={setTags}
-                    addItem={addItem}
-                  />
-                }
-              />
             </Routes>
-          </Content>
+          </Content> */}
         </Layout>
-        <Footer />
+        {/* <Footer /> */}
       </Layout>
     </Router>
   );

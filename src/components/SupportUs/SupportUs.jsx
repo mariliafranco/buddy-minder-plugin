@@ -1,6 +1,7 @@
+/* global chrome */
 import React from "react";
-import { Typography, Button, Space } from "antd";
 import { useTranslation } from "react-i18next";
+import { Typography, Button, Space } from "antd";
 import { DollarCircleFilled, CoffeeOutlined } from "@ant-design/icons";
 import "./SupportUs.scss";
 

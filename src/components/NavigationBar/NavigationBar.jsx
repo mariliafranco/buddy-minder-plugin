@@ -1,16 +1,16 @@
+/* global chrome */
 import React from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import {
   ShakeOutlined,
   ThunderboltOutlined,
   UserSwitchOutlined,
 } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 const NavigationBar = () => {
   const { t } = useTranslation();
-
   const items = [
     {
       label: <Link to="/settings">{t("settings")}</Link>,
@@ -18,7 +18,7 @@ const NavigationBar = () => {
       key: "1",
     },
     {
-      label: <Link to="/add-reminder">{t("launchNewMemorization")}</Link>,
+      label: <Link to="/">{t("launchNewMemorization")}</Link>,
       icon: <ThunderboltOutlined />,
       key: "2",
     },
@@ -33,7 +33,7 @@ const NavigationBar = () => {
     <div className="navigation-bar-container">
       <Menu
         theme="dark"
-        defaultSelectedKeys={["1"]}
+        defaultSelectedKeys={["2"]}
         mode="horizontal"
         items={items}
       />

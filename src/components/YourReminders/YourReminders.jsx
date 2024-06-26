@@ -1,15 +1,16 @@
+/* global chrome */
 import React, { useEffect, useState } from "react";
 import { List, Space, Tag, Typography } from "antd";
 import { collection, getDocs } from "firebase/firestore";
-import { db, auth } from "../../firebase";
 import { useTranslation } from "react-i18next";
+import { db, auth } from "../../firebase";
 import "./YourReminders.scss";
 
 const { Title } = Typography;
 
 const YourReminders = () => {
-  const [items, setItems] = useState([]);
   const { t } = useTranslation();
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const fetchReminders = async () => {

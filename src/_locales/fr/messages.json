@@ -1,0 +1,215 @@
+{
+  "appName": {
+    "message": "BuddyMinder"
+  },
+  "appDescription": {
+    "message": "BuddyMinder vous aide à retenir ce que vous avez appris ou que vous ne voulez pas oublier en utilisant des techniques efficaces de mémorisation et de répétition de manière facile et engageante."
+  },
+  "register": {
+    "message": "S'inscrire"
+  },
+  "login": {
+    "message": "Connexion"
+  },
+  "email": {
+    "message": "E-mail"
+  },
+  "invalidEmail": {
+    "message": "L'e-mail n'est pas valide!"
+  },
+  "emailRequired": {
+    "message": "Veuillez saisir votre e-mail!"
+  },
+  "password": {
+    "message": "Mot de passe"
+  },
+  "passwordRequired": {
+    "message": "Veuillez saisir votre mot de passe!"
+  },
+  "confirmPassword": {
+    "message": "Confirmer le mot de passe"
+  },
+  "confirmPasswordRequired": {
+    "message": "Veuillez confirmer votre mot de passe!"
+  },
+  "passwordMismatch": {
+    "message": "Les mots de passe ne correspondent pas!"
+  },
+  "alreadyHaveAccount": {
+    "message": "Vous avez déjà un compte? Connexion"
+  },
+  "dontHaveAccount": {
+    "message": "Vous n'avez pas de compte? S'inscrire"
+  },
+  "forgotPassword": {
+    "message": "Mot de passe oublié?"
+  },
+  "loginWithGoogle": {
+    "message": "Connexion avec Google"
+  },
+  "passwordResetEmailSent": {
+    "message": "L'e-mail de réinitialisation du mot de passe a été envoyé!"
+  },
+  "supportUs": {
+    "message": "Soutenez-nous"
+  },
+  "contactMessage": {
+    "message": "Vous manquez quelque chose ou avez des suggestions? Contactez-nous à"
+  },
+  "welcome": {
+    "message": "Bienvenue"
+  },
+  "reminderInfo": {
+    "message": "Vous avez déjà {{count}} rappels enregistrés. Votre mémoire s'est-elle déjà améliorée?"
+  },
+  "goToReminders": {
+    "message": "Aller à Vos Rappels"
+  },
+  "logout": {
+    "message": "Déconnexion"
+  },
+  "supportTitle": {
+    "message": "Soutenez-nous"
+  },
+  "supportMessage": {
+    "message": "Si vous aimez utiliser cette application et que vous souhaitez nous soutenir, vous pouvez nous aider à améliorer et ajouter de nouvelles fonctionnalités."
+  },
+  "paypalMessage": {
+    "message": "Faites un don via PayPal ou"
+  },
+  "coffeeMessage": {
+    "message": "achetez-nous un café!"
+  },
+  "contactInfo": {
+    "message": "Vous manquez quelque chose ou avez des suggestions? Contactez-nous à "
+  },
+  "donateViaPayPal": {
+    "message": "Faire un don via PayPal"
+  },
+  "buyMeACoffee": {
+    "message": "Achetez-moi un Café"
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "sendNotifications": {
+    "message": "Envoyez-moi des Notifications"
+  },
+  "showRemindersByTags": {
+    "message": "Afficher uniquement les rappels basés sur les tags sélectionnés"
+  },
+  "tags": {
+    "message": "Tags"
+  },
+  "noCategories": {
+    "message": "Vous n'avez pas encore créé de catégories."
+  },
+  "createNewReminder": {
+    "message": "Créez votre nouveau rappel"
+  },
+  "here": {
+    "message": "ici"
+  },
+  "startBoostingMemory": {
+    "message": "pour commencer à améliorer votre mémoire!"
+  },
+  "notificationFrequency": {
+    "message": "Fréquence des Notifications"
+  },
+  "remindersEvery": {
+    "message": "Les rappels seront envoyés toutes les"
+  },
+  "minutes": {
+    "message": "minutes"
+  },
+  "changeFrequency": {
+    "message": "Changer la fréquence"
+  },
+  "launchNewMemorization": {
+    "message": "Lancer une Nouvelle Mémorisation"
+  },
+  "user": {
+    "message": "Utilisateur"
+  },
+  "yourBrainsMemorizationCollection": {
+    "message": "Votre Collection de Mémorisation Cérébrale"
+  },
+  "noRemindersYet": {
+    "message": "Vous n'avez pas encore de rappels"
+  },
+  "titleRequired": {
+    "message": "Veuillez entrer un titre"
+  },
+  "descriptionRequired": {
+    "message": "Veuillez entrer une description"
+  },
+  "fillAllFields": {
+    "message": "Veuillez remplir tous les champs et ajouter au moins une étiquette."
+  },
+  "writeWhatYouWantToMemorize": {
+    "message": "Écrivez ce que vous voulez mémoriser"
+  },
+  "addRemindersHere": {
+    "message": "Ajoutez vos rappels ici et laissez BuddyMinder faire le reste."
+  },
+  "useTagsToOrganize": {
+    "message": "Utilisez des étiquettes pour organiser et personnaliser vos rappels pour un coup de pouce de mémoire plus intelligent et plus efficace."
+  },
+  "titleOfYourReminder": {
+    "message": "Titre de votre rappel"
+  },
+  "titlePlaceholder": {
+    "message": "Titre (max 30 caractères)"
+  },
+  "descriptionPlaceholder": {
+    "message": "Description de votre rappel. Gardez-le bref!"
+  },
+  "tagsPlaceholder": {
+    "message": "Étiquettes (séparées par des virgules)"
+  },
+  "dates": {
+    "message": "Dates"
+  },
+  "familyBirthday": {
+    "message": "Anniversaire Familial"
+  },
+  "weddingAnniversary": {
+    "message": "Anniversaire de Mariage"
+  },
+  "goals": {
+    "message": "Objectifs"
+  },
+  "personalGoals": {
+    "message": "Objectifs Personnels"
+  },
+  "professionalGoals": {
+    "message": "Objectifs Professionnels"
+  },
+  "insights": {
+    "message": "Perspectives"
+  },
+  "books": {
+    "message": "Livres"
+  },
+  "stoicism": {
+    "message": "Stoïcisme"
+  },
+  "positiveAffirmations": {
+    "message": "Affirmations Positives"
+  },
+  "learning": {
+    "message": "Apprentissage"
+  },
+  "englishGrammar": {
+    "message": "Grammaire Anglaise"
+  },
+  "englishWords": {
+    "message": "Mots en Anglais"
+  },
+  "yourTags": {
+    "message": "Vos Étiquettes"
+  },
+  "add": {
+    "message": "Ajouter"
+  }
+}
