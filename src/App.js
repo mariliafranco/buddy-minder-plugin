@@ -16,8 +16,8 @@ import "./App.scss";
 
 const { Header, Content } = Layout;
 
-const App = () => {
-  const [title, setTitle] = useState("");
+const App = ({ selectedText }) => {
+  const [title, setTitle] = useState(selectedText || "");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState([]);
   const [items, setItems] = useState([]);
@@ -39,14 +39,9 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
-  // useEffect(() => {
-  //   if (selectedText !== title) {
-  //     setTitle(selectedText);
-  //     console.log("Inside the if selectedText = ", selectedText);
-  //   }
-
-  //   console.log("Outside the if selectedText = ", selectedText);
-  // }, [selectedText, title]);
+  useEffect(() => {
+    console.log("selectedText:", selectedText, "title:", title);
+  }, []);
 
   useEffect(() => {
     chrome.runtime.onMessage.addListener((message) => {
@@ -154,8 +149,7 @@ const App = () => {
       <Layout style={{ minHeight: "100vh" }}>
         <Layout className="site-layout">
           <header className="site-layout-background">
-            Testing
-            {/* <h1 className="site-layout-header">
+            <h1 className="site-layout-header">
               <Avatar
                 size={50}
                 src={brandIcon}
@@ -164,9 +158,9 @@ const App = () => {
               <span>
                 BuddyMinder<sup>&#174;</sup>
               </span>
-            </h1> */}
+            </h1>
           </header>
-          {/* <Content style={{ margin: "16px" }}>
+          <Content style={{ margin: "16px" }}>
             <Routes>
               <Route
                 path="/"
@@ -213,7 +207,7 @@ const App = () => {
                 }
               />
             </Routes>
-          </Content> */}
+          </Content>
         </Layout>
         {/* <Footer /> */}
       </Layout>

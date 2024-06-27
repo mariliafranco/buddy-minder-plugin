@@ -68,6 +68,10 @@ module.exports = {
           from: path.resolve(__dirname, "public", "icon-128.png"),
           to: "icon-128.png",
         },
+        {
+          from: path.resolve(__dirname, "src", "remindly-vector.png"),
+          to: "remindly-vector.png",
+        },
         { from: path.resolve(__dirname, "public", "assets"), to: "assets" },
         { from: path.resolve(__dirname, "src", "_locales"), to: "_locales" },
       ],

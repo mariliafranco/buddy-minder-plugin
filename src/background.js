@@ -1,32 +1,18 @@
 /* global chrome */
 let selectedText = "";
 
+chrome.runtime.onInstalled.addListener(() => {
+  console.log("Extension installed");
+});
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log("Received message in background:", message);
   if (message.action === "textSelected") {
     selectedText = message.text;
     console.log("Text selected in background:", selectedText);
-    chrome.contextMenus.create(
-      {
-        id: "memorizeIt",
-        title: "Memorize It",
-        contexts: ["selection"],
-      },
-      () => {
-        if (chrome.runtime.lastError) {
-          console.error(
-            "Context menu creation error:",
-            chrome.runtime.lastError
-          );
-        } else {
-          console.log("Context menu created successfully");
-        }
-      }
-    );
-  }
-});
-
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "memorizeIt") {
+    sendResponse({ status: "success" });
+  } else if (message.action === "openPopup") {
+    console.log("Opening popup with text:", selectedText);
     chrome.windows.create(
       {
         url: "popup.html",
@@ -35,8 +21,19 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         height: 300,
       },
       (win) => {
-        chrome.runtime.sendMessage({ action: "openPopup", text: selectedText });
-        console.log("Popup window created with selected text:", selectedText);
+        console.log("Popup window created:", win);
+        chrome.runtime.sendMessage(
+          { action: "openPopup", text: selectedText },
+          (response) => {
+            console.log("Popup message sent successfully:", response);
+            if (chrome.runtime.lastError) {
+              console.error(
+                "Error sending popup message:",
+                chrome.runtime.lastError
+              );
+            }
+          }
+        );
       }
     );
   }

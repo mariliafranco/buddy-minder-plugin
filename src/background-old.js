@@ -117,19 +117,3 @@ chrome.runtime.onInstalled.addListener((details) => {
     injectContentScriptInAllTabs();
   }
 });
-
-// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-//   console.log("Background.js Received Message:", message);
-//   if (message.type === "TEXT_SELECTED") {
-//     chrome.storage.local.set({ selectedText: message.text }, () => {
-//       if (chrome.runtime.lastError) {
-//         console.error("Error setting selectedText:", chrome.runtime.lastError);
-//         sendResponse({ success: false, error: chrome.runtime.lastError });
-//       } else {
-//         console.log("Selected text set successfully.");
-//         sendResponse({ success: true });
-//       }
-//     });
-//     return true; // Indicates that we will send a response asynchronously
-//   }
-// });

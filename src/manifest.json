@@ -31,6 +31,12 @@
     "48": "icon-48.png",
     "128": "icon-128.png"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["remindly-vector.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "author": "mariliaandrad",
   "default_locale": "en"
 }
