@@ -34,6 +34,7 @@ const Settings = () => {
       chrome.storage.local.get(
         ["enableNotifications", "selectedTags", "frequency"],
         (result) => {
+          console.log("Initial settings loaded:", result);
           if (result.enableNotifications !== undefined) {
             setEnableNotifications(result.enableNotifications);
           }

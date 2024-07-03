@@ -1,6 +1,12 @@
 /* global chrome */
 chrome.runtime.onInstalled.addListener(() => {
   console.log("Extension installed");
+  // Initialize alarm on installation
+  chrome.storage.local.get("frequency", (result) => {
+    const frequency = result.frequency || 60;
+    console.log("Initial frequency set to:", frequency);
+    updateAlarm(frequency);
+  });
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -39,19 +45,24 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   sendResponse({ success: true });
 });
 
-// Alarm and notification logic
 chrome.alarms.onAlarm.addListener((alarm) => {
+  console.log("Alarm triggered:", alarm.name);
   if (alarm.name === "sendNotification") {
     chrome.storage.local.get(
       ["reminders", "enableNotifications", "selectedTags"],
       (result) => {
+        console.log("Alarm storage get result:", result);
         if (result.enableNotifications) {
           const reminders = result.reminders || [];
           const selectedTags = result.selectedTags || [];
 
-          const filteredReminders = reminders.filter((reminder) =>
-            reminder.tags.some((tag) => selectedTags.includes(tag))
-          );
+          // If no tags are selected, consider all reminders
+          const filteredReminders =
+            selectedTags.length === 0
+              ? reminders
+              : reminders.filter((reminder) =>
+                  reminder.tags.some((tag) => selectedTags.includes(tag))
+                );
 
           if (filteredReminders.length > 0) {
             const randomReminder =
@@ -72,22 +83,25 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   }
 });
 
-// Function to update the alarm based on the frequency
 const updateAlarm = (frequency) => {
+  console.log("Updating alarm with frequency:", frequency);
   chrome.alarms.clear("sendNotification", () => {
-    chrome.alarms.create("sendNotification", { periodInMinutes: frequency });
+    chrome.alarms.create("sendNotification", { periodInMinutes: 1 });
+    console.log("Alarm created with period:", 1, "minutes");
   });
 };
 
-// Listen for changes in the frequency and update the alarm accordingly
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === "local" && changes.frequency) {
-    updateAlarm(changes.frequency.newValue);
+    const newFrequency = changes.frequency.newValue;
+    console.log("Frequency changed, updating alarm to:", newFrequency);
+    updateAlarm(newFrequency);
   }
 });
 
 // Set an alarm for notifications based on the user's frequency setting on load
 chrome.storage.local.get("frequency", (result) => {
   const frequency = result.frequency || 60;
+  console.log("Setting initial alarm frequency to:", frequency);
   updateAlarm(frequency);
 });

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Input, Typography, Divider } from "antd";
+import { Button, Input, Typography } from "antd";
 import {
   auth,
   createUserWithEmailAndPassword,
@@ -21,9 +21,11 @@ const Login = ({ onLoginSuccess, currentUser }) => {
   const [password, setPassword] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
   const [user, setUser] = useState(currentUser);
+  const [error, setError] = useState(null);
 
   const handleLogin = async () => {
     try {
+      setError(null);
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
@@ -32,12 +34,14 @@ const Login = ({ onLoginSuccess, currentUser }) => {
       setUser(userCredential.user);
       onLoginSuccess(userCredential.user);
     } catch (error) {
+      setError(t("Login Error: Invalid email or password"));
       console.error("Login Error:", error);
     }
   };
 
   const handleRegister = async () => {
     try {
+      setError(null);
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -46,6 +50,7 @@ const Login = ({ onLoginSuccess, currentUser }) => {
       setUser(userCredential.user);
       onLoginSuccess(userCredential.user);
     } catch (error) {
+      setError(t("Registration Error: " + error.message));
       console.error("Registration Error:", error);
     }
   };
@@ -55,6 +60,7 @@ const Login = ({ onLoginSuccess, currentUser }) => {
       await sendPasswordResetEmail(auth, email);
       alert(t("passwordResetEmailSent"));
     } catch (error) {
+      setError(t("Password Reset Error: " + error.message));
       console.error("Password Reset Error:", error);
     }
   };
@@ -67,6 +73,13 @@ const Login = ({ onLoginSuccess, currentUser }) => {
       onLoginSuccess(userCredential.user);
     } catch (error) {
       console.error("Google Login Error:", error);
+      setError(t("Google Login Error: " + error.message));
+    }
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      isRegistering ? handleRegister() : handleLogin();
     }
   };
 
@@ -90,6 +103,7 @@ const Login = ({ onLoginSuccess, currentUser }) => {
           value={email}
           placeholder={t("email")}
           required
+          onKeyPress={handleKeyPress}
         />
       </div>
       <div className="login-input-password">
@@ -99,12 +113,18 @@ const Login = ({ onLoginSuccess, currentUser }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          onKeyPress={handleKeyPress}
         />
       </div>
+      {error && <div className="error-message">{error}</div>}
       {isRegistering && (
         <div className="login-input-password">
           <label>{t("confirmPassword")}</label>
-          <Input.Password placeholder={t("confirmPassword")} required />
+          <Input.Password
+            placeholder={t("confirmPassword")}
+            required
+            onKeyPress={handleKeyPress}
+          />
         </div>
       )}
       <div className="login-form-buttons-container">
@@ -135,7 +155,6 @@ const Login = ({ onLoginSuccess, currentUser }) => {
       </div>
       {!isRegistering && (
         <>
-          {/* <Divider /> */}
           <Button
             className="secondary-button google-button"
             type="default"

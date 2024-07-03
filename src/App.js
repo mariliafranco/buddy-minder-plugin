@@ -105,6 +105,7 @@ const App = ({ selectedText }) => {
       chrome.storage.local.get(
         ["enableNotifications", "frequency", "selectedTags"],
         (result) => {
+          console.log("Loading notifications settings:", result);
           setEnableNotifications(result.enableNotifications || true);
           setFrequency(result.frequency || 60);
           setSelectedTags(result.selectedTags || []);
@@ -112,6 +113,7 @@ const App = ({ selectedText }) => {
       );
 
       const scheduleNotifications = (frequency) => {
+        console.log("Scheduling notifications with frequency:", frequency);
         chrome.alarms.clear("sendNotification", () => {
           chrome.alarms.create("sendNotification", {
             periodInMinutes: frequency,
@@ -123,7 +125,7 @@ const App = ({ selectedText }) => {
         scheduleNotifications(frequency);
       }
     }
-  }, [enableNotifications, frequency, selectedTags]);
+  }, []);
 
   if (loading) {
     return (
