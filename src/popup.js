@@ -10,11 +10,14 @@ const Popup = () => {
   console.log("Popup.js selectedText:", selectedText);
 
   useEffect(() => {
-    chrome.runtime.onMessage.addListener((message) => {
-      if (message.action === "openPopup") {
-        setSelectedText(message.text);
-      }
-    });
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get("mode");
+    const text = urlParams.get("text");
+
+    if (mode === "textSelection" && text) {
+      setSelectedText(text);
+      console.log("Popup received text from URL:", text);
+    }
   }, []);
 
   return <App selectedText={selectedText} />;

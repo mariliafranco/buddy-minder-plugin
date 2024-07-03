@@ -29,6 +29,24 @@ const Settings = () => {
   const [userTags, setUserTags] = useState([]);
 
   useEffect(() => {
+    // Load initial settings from Chrome storage
+    if (typeof chrome !== "undefined" && chrome.storage) {
+      chrome.storage.local.get(
+        ["enableNotifications", "selectedTags", "frequency"],
+        (result) => {
+          if (result.enableNotifications !== undefined) {
+            setEnableNotifications(result.enableNotifications);
+          }
+          if (result.selectedTags !== undefined) {
+            setSelectedTags(result.selectedTags);
+          }
+          if (result.frequency !== undefined) {
+            setFrequency(result.frequency);
+          }
+        }
+      );
+    }
+
     const fetchUserTags = async () => {
       const user = auth.currentUser;
       if (user) {
@@ -68,6 +86,7 @@ const Settings = () => {
   };
 
   useEffect(() => {
+    // Save settings to Chrome storage whenever they change
     if (typeof chrome !== "undefined" && chrome.storage) {
       chrome.storage.local.set({
         enableNotifications,
@@ -153,7 +172,6 @@ const Settings = () => {
             </Text>
           </Col>
         </Col>
-
         <Col span={24} className="settings-col">
           <div className="settings-change-frequency">
             <Text className="settings-col-info" style={{ marginRight: "10px" }}>

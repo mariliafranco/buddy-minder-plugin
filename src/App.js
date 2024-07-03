@@ -17,7 +17,7 @@ import "./App.scss";
 const { Header, Content } = Layout;
 
 const App = ({ selectedText }) => {
-  const [title, setTitle] = useState(selectedText || "");
+  const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState([]);
   const [items, setItems] = useState([]);
@@ -39,20 +39,9 @@ const App = ({ selectedText }) => {
     return () => unsubscribe();
   }, []);
 
-  useEffect(() => {
-    console.log("selectedText:", selectedText, "title:", title);
-  }, []);
-
-  useEffect(() => {
-    chrome.runtime.onMessage.addListener((message) => {
-      let selectedText = chrome.storage.local.get("selectedText");
-      if (selectedText) {
-        setTitle(selectedText);
-        console.log("Popup received text:", selectedText);
-      }
-    });
-    console.log(title);
-  }, []);
+  // useEffect(() => {
+  //   console.log("selectedText:", selectedText, "title:", title);
+  // }, []);
 
   const fetchReminders = async (user) => {
     try {
@@ -167,7 +156,7 @@ const App = ({ selectedText }) => {
                 element={
                   user ? (
                     <AddReminder
-                      title={title}
+                      title={selectedText || title}
                       setTitle={setTitle}
                       description={description}
                       setDescription={setDescription}
@@ -209,7 +198,7 @@ const App = ({ selectedText }) => {
             </Routes>
           </Content>
         </Layout>
-        {/* <Footer /> */}
+        <Footer />
       </Layout>
     </Router>
   );

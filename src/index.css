@@ -20,11 +20,24 @@ code {
   display: flex;
   align-items: center;
   background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
   padding: 4px 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   font-size: 14px;
+}
+
+#buddyMinderIcon span {
+  display: none;
+  bottom: 30px;
+  left: 0px;
+  visibility: hidden;
+}
+
+#buddyMinderIcon:hover span {
+  color: #4979bf;
+  display: flex;
+  visibility: visible;
 }
 
 #buddyMinderIcon img {
