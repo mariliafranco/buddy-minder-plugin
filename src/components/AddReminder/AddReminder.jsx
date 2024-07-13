@@ -220,7 +220,7 @@ const AddReminder = ({
             <Input
               placeholder={t("titlePlaceholder")}
               value={inputTitle}
-              onChange={(e) => setInputTitle(e.target.value.slice(0, 30))}
+              onChange={(e) => setInputTitle(e.target.value.slice(0, 35))}
               className="input-field"
               onBlur={() => setTitleFocused(false)}
               autoFocus
@@ -243,7 +243,7 @@ const AddReminder = ({
               placeholder={t("descriptionPlaceholder")}
               value={inputDescription}
               onChange={(e) =>
-                setInputDescription(e.target.value.slice(0, 100))
+                setInputDescription(e.target.value.slice(0, 250))
               }
               className="input-field"
               onBlur={() => setDescriptionFocused(false)}

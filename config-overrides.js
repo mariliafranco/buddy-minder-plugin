@@ -1,10 +1,12 @@
 const { override, addWebpackPlugin } = require("customize-cra");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require("path");
 
 const overrideEntry = (config) => {
   config.entry = {
     popup: "./src/popup.js",
+    reminderPopup: "./src/reminderPopup.js",
     background: "./src/background.js",
     content: "./src/content.js",
   };
@@ -32,6 +34,14 @@ module.exports = override(
     })
   ),
   addWebpackPlugin(
+    new HtmlWebpackPlugin({
+      inject: true,
+      chunks: ["reminderPopup"],
+      filename: "reminderPopup.html",
+      template: "./public/reminderPopup.html",
+    })
+  ),
+  addWebpackPlugin(
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -45,6 +55,10 @@ module.exports = override(
         {
           from: path.resolve(__dirname, "public", "icon-128.png"),
           to: "icon-128.png",
+        },
+        {
+          from: path.resolve(__dirname, "src", "remindly-vector.png"),
+          to: "remindly-vector.png",
         },
         { from: path.resolve(__dirname, "public", "assets"), to: "assets" },
         { from: path.resolve(__dirname, "src", "_locales"), to: "_locales" },

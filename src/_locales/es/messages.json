@@ -3,213 +3,213 @@
     "message": "BuddyMinder"
   },
   "appDescription": {
-    "message": "BuddyMinder helps you retain what you've learned or don't want to forget by using effective memorization and repetition techniques in a no-effort and engaging way."
+    "message": "BuddyMinder te ayuda a retener lo que has aprendido o no quieres olvidar usando técnicas de memorización y repetición."
   },
   "register": {
-    "message": "Register"
+    "message": "Registrarse"
   },
   "login": {
-    "message": "Login"
+    "message": "Iniciar sesión"
   },
   "email": {
-    "message": "E-mail"
+    "message": "Correo electrónico"
   },
   "invalidEmail": {
-    "message": "The input is not valid E-mail!"
+    "message": "¡El correo electrónico no es válido!"
   },
   "emailRequired": {
-    "message": "Please input your E-mail!"
+    "message": "¡Por favor, introduce tu correo electrónico!"
   },
   "password": {
-    "message": "Password"
+    "message": "Contraseña"
   },
   "passwordRequired": {
-    "message": "Please input your password!"
+    "message": "¡Por favor, introduce tu contraseña!"
   },
   "confirmPassword": {
-    "message": "Confirm Password"
+    "message": "Confirmar contraseña"
   },
   "confirmPasswordRequired": {
-    "message": "Please confirm your password!"
+    "message": "¡Por favor, confirma tu contraseña!"
   },
   "passwordMismatch": {
-    "message": "The passwords do not match!"
+    "message": "¡Las contraseñas no coinciden!"
   },
   "alreadyHaveAccount": {
-    "message": "Already have an account? Login"
+    "message": "¿Ya tienes una cuenta? Inicia sesión"
   },
   "dontHaveAccount": {
-    "message": "Don't have an account? Register"
+    "message": "¿No tienes una cuenta? Regístrate"
   },
   "forgotPassword": {
-    "message": "Forgot Password?"
+    "message": "¿Olvidaste tu contraseña?"
   },
   "loginWithGoogle": {
-    "message": "Login with Google"
+    "message": "Iniciar sesión con Google"
   },
   "passwordResetEmailSent": {
-    "message": "Password reset email has been sent!"
+    "message": "¡El correo de restablecimiento de contraseña ha sido enviado!"
   },
   "supportUs": {
-    "message": "Support Us"
+    "message": "Apóyanos"
   },
   "contactMessage": {
-    "message": "Missing something or have suggestions? Reach us at"
+    "message": "¿Falta algo o tienes sugerencias? Contáctanos en"
   },
   "welcome": {
-    "message": "Welcome"
+    "message": "Bienvenido"
   },
   "reminderInfo": {
-    "message": "You have already {{count}} reminders registered. Has your memory improved already?"
+    "message": "Ya tienes {{count}} recordatorios registrados. ¿Ha mejorado tu memoria?"
   },
   "goToReminders": {
-    "message": "Go to Your Reminders"
+    "message": "Ir a tus recordatorios"
   },
   "logout": {
-    "message": "Logout"
+    "message": "Cerrar sesión"
   },
   "supportTitle": {
-    "message": "Support Us"
+    "message": "Apóyanos"
   },
   "supportMessage": {
-    "message": "If you enjoy using this app and would like to support us, you can help us improve and add new features."
+    "message": "Si disfrutas usando esta aplicación y quieres apoyarnos, puedes ayudarnos a mejorar y agregar nuevas funciones."
   },
   "paypalMessage": {
-    "message": "Donate via PayPal or"
+    "message": "Dona a través de PayPal o"
   },
   "coffeeMessage": {
-    "message": "buy us a coffee!"
+    "message": "¡cómpranos un café!"
   },
   "contactInfo": {
-    "message": "Missing something or have suggestions? Reach us at "
+    "message": "¿Falta algo o tienes sugerencias? Contáctanos en "
   },
   "donateViaPayPal": {
-    "message": "Donate via PayPal"
+    "message": "Donar a través de PayPal"
   },
   "buyMeACoffee": {
-    "message": "Buy Me a Coffee"
+    "message": "Cómprame un café"
   },
   "settings": {
-    "message": "Settings"
+    "message": "Configuraciones"
   },
   "sendNotifications": {
-    "message": "Send me Notifications"
+    "message": "Envíame notificaciones"
   },
   "showRemindersByTags": {
-    "message": "Show Only Reminders Based on Selected Tags"
+    "message": "Mostrar solo recordatorios basados en etiquetas seleccionadas"
   },
   "tags": {
-    "message": "Tags"
+    "message": "Etiquetas"
   },
   "noCategories": {
-    "message": "You haven't created any categories yet."
+    "message": "Aún no has creado ninguna categoría."
   },
   "createNewReminder": {
-    "message": "Create your new reminder"
+    "message": "Crea tu nuevo recordatorio"
   },
   "here": {
-    "message": "here"
+    "message": "aquí"
   },
   "startBoostingMemory": {
-    "message": "to start boosting your memory!"
+    "message": "¡para comenzar a mejorar tu memoria!"
   },
   "notificationFrequency": {
-    "message": "Notification Frequency"
+    "message": "Frecuencia de notificación"
   },
   "remindersEvery": {
-    "message": "Reminders will be sent every"
+    "message": "Se enviarán recordatorios cada"
   },
   "minutes": {
-    "message": "minutes"
+    "message": "minutos"
   },
   "changeFrequency": {
-    "message": "Change frequency"
+    "message": "Cambiar frecuencia"
   },
   "launchNewMemorization": {
-    "message": "Launch New Memorization"
+    "message": "Lanzar nueva memorización"
   },
   "user": {
-    "message": "User"
+    "message": "Usuario"
   },
   "yourBrainsMemorizationCollection": {
-    "message": "Your Brain's Memorization Collection"
+    "message": "La colección de memorización de tu cerebro"
   },
   "noRemindersYet": {
-    "message": "You don't have any reminders yet"
+    "message": "Aún no tienes ningún recordatorio"
   },
   "titleRequired": {
-    "message": "Please enter a title"
+    "message": "Por favor, introduce un título"
   },
   "descriptionRequired": {
-    "message": "Please enter a description"
+    "message": "Por favor, introduce una descripción"
   },
   "fillAllFields": {
-    "message": "Please fill in all fields and add at least one tag."
+    "message": "Por favor, completa todos los campos y añade al menos una etiqueta."
   },
   "writeWhatYouWantToMemorize": {
-    "message": "Write What You Want to Memorize"
+    "message": "Escribe lo que quieres memorizar"
   },
   "addRemindersHere": {
-    "message": "Add your reminders here and let BuddyMinder do the rest."
+    "message": "Añade tus recordatorios aquí y deja que BuddyMinder haga el resto."
   },
   "useTagsToOrganize": {
-    "message": "Use tags to organize and personalize your reminders for a smarter, more efficient memory boost."
+    "message": "Usa etiquetas para organizar y personalizar tus recordatorios para un impulso de memoria más inteligente y eficiente."
   },
   "titleOfYourReminder": {
-    "message": "Title of your reminder"
+    "message": "Título de tu recordatorio"
   },
   "titlePlaceholder": {
-    "message": "Title (max 30 chars)"
+    "message": "Título (máx. 30 caracteres)"
   },
   "descriptionPlaceholder": {
-    "message": "Description of your reminder. Keep it brief!"
+    "message": "Descripción de tu recordatorio. ¡Manténlo breve!"
   },
   "tagsPlaceholder": {
-    "message": "Tags (comma separated)"
+    "message": "Etiquetas (separadas por comas)"
   },
   "dates": {
-    "message": "Dates"
+    "message": "Fechas"
   },
   "familyBirthday": {
-    "message": "Family Birthday"
+    "message": "Cumpleaños de la familia"
   },
   "weddingAnniversary": {
-    "message": "Wedding Anniversary"
+    "message": "Aniversario de bodas"
   },
   "goals": {
-    "message": "Goals"
+    "message": "Metas"
   },
   "personalGoals": {
-    "message": "Personal Goals"
+    "message": "Metas personales"
   },
   "professionalGoals": {
-    "message": "Professional Goals"
+    "message": "Metas profesionales"
   },
   "insights": {
-    "message": "Insights"
+    "message": "Percepciones"
   },
   "books": {
-    "message": "Books"
+    "message": "Libros"
   },
   "stoicism": {
-    "message": "Stoicism"
+    "message": "Estoicismo"
   },
   "positiveAffirmations": {
-    "message": "Positive Affirmations"
+    "message": "Afirmaciones positivas"
   },
   "learning": {
-    "message": "Learning"
+    "message": "Aprendizaje"
   },
   "englishGrammar": {
-    "message": "English Grammar"
+    "message": "Gramática inglesa"
   },
   "englishWords": {
-    "message": "English Words"
+    "message": "Palabras en inglés"
   },
   "yourTags": {
-    "message": "Your Tags"
+    "message": "Tus etiquetas"
   },
   "add": {
-    "message": "Add"
+    "message": "Añadir"
   }
 }

@@ -2,7 +2,7 @@ import "./index.css";
 
 /* global chrome */
 window.onload = () => {
-  console.log("Hello Marília, I am from content script");
+  console.log("Hello dear, I am from content script");
 };
 
 let currentSelectedText = "";

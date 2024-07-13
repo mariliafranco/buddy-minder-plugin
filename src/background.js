@@ -21,8 +21,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       {
         url,
         type: "popup",
-        width: 450,
-        height: 780,
+        width: 460,
+        height: 650,
       },
       (win) => {
         console.log("Popup window created:", win);
@@ -69,12 +69,23 @@ chrome.alarms.onAlarm.addListener((alarm) => {
               filteredReminders[
                 Math.floor(Math.random() * filteredReminders.length)
               ];
-            chrome.notifications.create({
+
+            // Truncate text for notification
+            const truncateText = (text, length) => {
+              return text.length > length
+                ? text.substring(0, length) + "..."
+                : text;
+            };
+            const maxLength = 100; // Adjust this value as needed
+
+            chrome.notifications.create(randomReminder.id, {
               type: "basic",
               iconUrl: "icon-48.png",
               title: randomReminder.title,
-              message: randomReminder.description,
+              message: truncateText(randomReminder.description, maxLength),
               priority: 2,
+              buttons: [{ title: "View More" }],
+              contextMessage: randomReminder.id, // Pass the reminder ID as context message
             });
           }
         }
@@ -86,8 +97,8 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 const updateAlarm = (frequency) => {
   console.log("Updating alarm with frequency:", frequency);
   chrome.alarms.clear("sendNotification", () => {
-    chrome.alarms.create("sendNotification", { periodInMinutes: 1 });
-    console.log("Alarm created with period:", 1, "minutes");
+    chrome.alarms.create("sendNotification", { periodInMinutes: frequency });
+    console.log("Alarm created with period:", frequency, "minutes");
   });
 };
 
@@ -105,3 +116,17 @@ chrome.storage.local.get("frequency", (result) => {
   console.log("Setting initial alarm frequency to:", frequency);
   updateAlarm(frequency);
 });
+
+// Handle notification button click
+chrome.notifications.onButtonClicked.addListener(
+  (notificationId, buttonIndex) => {
+    if (buttonIndex === 0) {
+      chrome.windows.create({
+        url: `reminderPopup.html?reminderId=${notificationId}`,
+        type: "popup",
+        width: 600,
+        height: 400,
+      });
+    }
+  }
+);

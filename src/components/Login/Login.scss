@@ -34,7 +34,8 @@
       margin-bottom: 16px;
 
       &:hover {
-        background-color: darken($highlight-primary-color, 10%);
+        background-color: darken($primary-color, 10%) !important;
+        border-color: darken($primary-color, 10%) !important;
       }
     }
 

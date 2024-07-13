@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reminder</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Shadows+Into+Light+Two&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Source Sans 3", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden; /* Remove scroll bars */
+      }
+      img {
+        width: 100px;
+        margin-top: 20px; /* Adjust top margin to reduce space */
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        margin: 0 20px; /* Add horizontal margin for better readability */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="remindly-vector.png" alt="BuddyMinder Logo" />
+    <h1 id="reminderTitle">Reminder Title</h1>
+    <p id="reminderDescription">Reminder Description</p>
+    <script src="reminderPopup.bundle.js"></script>
+  </body>
+</html>

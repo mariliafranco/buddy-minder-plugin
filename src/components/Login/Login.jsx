@@ -153,7 +153,7 @@ const Login = ({ onLoginSuccess, currentUser }) => {
           {isRegistering ? t("alreadyHaveAccount") : t("dontHaveAccount")}
         </Button>
       </div>
-      {!isRegistering && (
+      {/* {!isRegistering && (
         <>
           <Button
             className="secondary-button google-button"
@@ -164,7 +164,7 @@ const Login = ({ onLoginSuccess, currentUser }) => {
             {t("loginWithGoogle")}
           </Button>
         </>
-      )}
+      )} */}
     </div>
   );
 };

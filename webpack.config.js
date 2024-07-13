@@ -8,6 +8,7 @@ module.exports = {
   devtool: "cheap-module-source-map",
   entry: {
     popup: path.resolve("./src/popup.js"),
+    reminderPopup: path.resolve("./src/reminderPopup.js"),
     background: path.resolve("./src/background.js"),
     content: path.resolve("./src/content.js"),
   },
@@ -53,6 +54,12 @@ module.exports = {
       chunks: ["popup"],
       filename: "popup.html",
       template: "./public/popup.html",
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      chunks: ["reminderPopup"],
+      filename: "reminderPopup.html",
+      template: "./public/reminderPopup.html",
     }),
     new CopyWebpackPlugin({
       patterns: [
