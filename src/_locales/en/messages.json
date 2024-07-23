@@ -211,5 +211,23 @@
   },
   "add": {
     "message": "Add"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "updated": {
+    "message": "Updated!"
+  },
+  "deleted": {
+    "message": "Deleted!"
   }
 }

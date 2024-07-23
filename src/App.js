@@ -178,7 +178,7 @@ const App = ({ selectedText }) => {
                 path="/user-reminders"
                 element={
                   user ? (
-                    <YourReminders items={items} />
+                    <YourReminders items={items} user={user} />
                   ) : (
                     <Login
                       onLoginSuccess={() => fetchReminders(auth.currentUser)}

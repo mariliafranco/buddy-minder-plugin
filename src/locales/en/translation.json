@@ -69,5 +69,11 @@
   "englishGrammar": "English Grammar",
   "englishWords": "English Words",
   "yourTags": "Your Tags",
-  "add": "Add"
+  "add": "Add",
+  "edit": "Edit",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "updated": "Updated!",
+  "deleted": "Deleted!"
 }

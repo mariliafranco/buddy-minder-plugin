@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .your-reminders-container {
   max-width: 800px;
   margin: 0 auto;
@@ -24,6 +25,7 @@
       }
 
       .reminder-content {
+        width: 100%;
         .reminder-title {
           font-size: 18px;
           color: #333;
@@ -39,6 +41,48 @@
 
           .reminder-tag {
             margin-bottom: 5px;
+          }
+        }
+
+        .reminder-actions-button {
+          display: flex;
+          justify-content: end;
+
+          .edit-button,
+          .delete-button {
+            background-color: unset;
+            box-shadow: unset;
+            border: unset;
+            margin-left: 0.5em;
+            color: #002242;
+            font-size: 0.9em;
+
+            :hover {
+              color: darken($primary-color, 10%) !important;
+              font-weight: 500;
+            }
+
+            :focus-visible {
+              outline: unset;
+            }
+          }
+
+          .save-button,
+          .cancel-button {
+            background-color: unset;
+            color: $accent-color;
+            box-shadow: unset;
+            border: unset;
+            font-size: 0.9em;
+
+            :hover {
+              color: darken($primary-color, 10%) !important;
+              font-weight: 500;
+            }
+
+            :focus-visible {
+              outline: unset;
+            }
           }
         }
       }

@@ -69,5 +69,11 @@
   "englishGrammar": "Grammaire Anglaise",
   "englishWords": "Mots en Anglais",
   "yourTags": "Vos Étiquettes",
-  "add": "Ajouter"
+  "add": "Ajouter",
+  "edit": "Modifier",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "delete": "Supprimer",
+  "updated": "Mis à jour",
+  "deleted": "Supprimé"
 }
